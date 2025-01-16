@@ -1,0 +1,49 @@
+/* ＝＝＝＝＝＝＝　全体の装飾　＝＝＝＝＝＝＝ */
+body {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 35px;
+  margin: 50px 0 70px 0;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+.basic-style {
+  text-shadow: 3px 3px 3px #80aba9;
+  border-color: #80aba9;
+}
+
+hr {
+  margin-bottom: 30px;
+  border: 1.5px solid #80aba9;
+  margin: 0;
+}
+
+label {
+  font-size: 18px;
+}
+
+
+
+
+/* ＝＝＝＝＝＝＝　基本事項のスタイル　＝＝＝＝＝＝＝ */
+
+
+.basic-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #d4dddd;
+  padding: 50px;
+}
+

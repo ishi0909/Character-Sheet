@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>キャラクターシート.page1</title>
+    <meta name="description" content="キャラクターシート１ページ目">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./CSS/character-sheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Noto+Sans+JP&family=Noto+Serif+JP&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    </head>
+
+  <body>
+    <h1>キャラクター設定シート   [現代・架空]</h1>
+    <form action="">
+
+      <!-- 基本事項 -->
+      <h2 class="basic-style">基本事項</h2>
+      <hr class="basic-style">
+      <div class="basic-wrapper">
+        <div class="basic-item">
+          <div class="column"> 
+            <dt><label for="name">名前</label></dt>
+            <dd><input type="text" name="name" size="31"></dd>
+          </div> 
+          <div class="column">
+            <dt><label for="age">年齢</label></dt>
+            <dd><input type="text" name="age" size="31">歳</dd>
+          </div>
+          <div class="column">
+            <dt><label for="gender">性別</label></dt>
+            <dd>
+              <label>男</label><input type="radio" name="gender">
+              <label>女</label><input type="radio" name="gender">
+            
+              <label>その他</label><input type="radio" name="gender">
+              <br>
+              <input type="text" name="gender" size="31" placeholder="コメント">
+            </dd>
+          </div>
+          <br>
+
+          <div class="column">
+            <dt><label for="country">国籍</label></dt>
+            <dd><input type="text" name="country" size="31"></dd>
+          </div>
+          <div class="column">
+            <dt><label for="race">種族/人種</label></dt>
+            <dd><input type="text" name="race" size="31"></dd>
+          </div>
+          <div class="column">  
+            <dt><label for="beauty">美醜</label></dt>
+            <dd><input type="text" name="beauty" size="31"></dd>
+          </div>
+        </div>
+        <div class="basic-item">
+          <div class="column">
+            <dt><label for="family-name">あだ名/称号等</label></dt>
+            <dd><input type="text" name="family-name" size="31"></dd>
+          </div>
+          <div class="column">         
+            <dt><label for="beauty">外見年齢</label></dt>
+            <dd><input type="text" name="beauty" size="31"></dd>
+          </div>
+          <div class="column">
+            <dt><label for="beauty">生年月日</label></dt>
+            <dd><input type="text" name="beauty" size="31"></dd>
+          </div>
+          <div class="column">
+            <dt><label for="beauty">居所</label></dt>
+            <dd><input type="text" name="beauty" size="31"></dd>
+          </div>
+          <div class="column">
+            <dt><label for="beauty">言語</label></dt>
+            <dd><input type="text" name="beauty" size="31"></dd>
+          </div>
+          <div class="column">
+            <dt><label for="beauty">血液型</label></dt>
+            <dd><input type="text" name="beauty" size="31"></dd>
+          </div>
+          <div class="column">
+            <dt><label for="academic-background">学歴</label></dt>
+            <br>
+            <dd>
+            <select name="academic-background" id="">
+              <option value="graduate-school">院卒</option>
+              <option value="university">大卒</option>
+              <option value="high-school">高卒</option>
+              <option value="junior-high-school">中卒</option>
+              <option value="preschool">未就学</option>
+              <option value="other">その他</option>
+            </select>
+          
+            <br>
+              <input type="text" name="academic-background" size="31" placeholder="コメント">
+            </dd>
+          </div>
+
+        </div>
+      </div>
+      
+
+
+
+    </form>
+  </body>
+</html>
