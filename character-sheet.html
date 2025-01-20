@@ -11,85 +11,51 @@
     </head>
 
   <body>
-    <h1>キャラクター設定シート</h1>
-    <form action="">
+    <h1>キャラクターシート</h1>
+    <form id="form" action="">
 
       <!-- ＝＝＝＝＝＝＝　基本事項 ＝＝＝＝＝＝＝　-->
-      <h2 class="basic-style">基本事項</h2>
+      <h2 class="basic-style">基本情報</h2>
       <hr class="basic-style">
-      <div class="basic-wrapper">
 
-        <!-- 基本事項１ -->
+      <!-- 基本事項１ -->
+      <div class="basic-wrapper">
         <div class="basic-item">
           <div class="column"> 
             <dt><span>名前</span></dt>
-            <dd><input type="text" name="name" size="31" placeholder="石田石造"></dd>
+            <dd><input type="text" name="name" size="38" placeholder="石田石造" maxlength="20" required></dd>
           </div> 
-
-          <div class="column">
-            <dt><span>年齢</span></dt>
-            <dd><input type="text" name="age" size="31" placeholder="30"></dd>
-          </div>
 
           <div class="column">
             <dt><span>性別</span></dt>
             <dd>
-              <label>男</label><input type="radio" name="gender">
-              <label>女</label><input type="radio" name="gender">
-            
-              <label>その他</label><input type="radio" name="gender">
+              <input type="radio" name="gender" id="gender-man" checked><label for="gender-man">男</label>
+              <input type="radio" name="gender" id="gender-women"><label for="gender-women">女</label>
+              <input type="radio" name="gender" id="gender-other"><label for="gender-other">その他</label>
               <br>
-              <input type="text" name="gender" size="31" placeholder="コメント">
+              <input type="text" name="gender" size="38" placeholder="コメント" maxlength="20">
             </dd>
           </div>
 
-          <div class="column">
-            <dt><span>居所</span></dt>
-            <dd><input type="text" name="home" size="31" placeholder="北海道"></dd>
-          </div>
-
-          <div class="column">
-            <dt><span>国籍</span></dt>
-            <dd><input type="text" name="country" size="31" placeholder="日本"></dd>
-          </div>
-
-          <div class="column">
-            <dt><span>種族/人種</span></dt>
-            <dd><input type="text" name="race" size="31" placeholder="日本人"></dd>
-          </div>
-
-          <div class="column">  
-            <dt><span>美醜</span></dt>
-            <dd><input type="text" name="beauty" size="31" placeholder="中の下"></dd>
-          </div>
-        </div>
-
-        <!-- 基本事項２ -->
-        <div class="basic-item">
-          <div class="column">
-            <dt><span>あだ名/称号等</span></dt>
-            <dd><input type="text" name="family-name" size="31" placeholder="石像"></dd>
+          <div class="column">         
+            <dt><span>肉体年齢</span></dt>
+            <dd><input type="text" name="beauty" size="38" placeholder="35" maxlength="20" required></dd>
           </div>
 
           <div class="column">         
-            <dt><span>外見年齢</span></dt>
-            <dd><input type="text" name="beauty" size="31" placeholder="35"></dd>
+            <dt><span>精神年齢</span></dt>
+            <dd><input type="text" name="beauty" size="38" placeholder="35" maxlength="20" required></dd>
           </div>
 
           <div class="column">
             <dt><span>生年月日</span></dt>
-            <dd><input type="text" name="birthday" size="31" placeholder="1990年11月11日"></dd>
-          </div>
-
-          <div class="column">
-            <dt><span>言語</span></dt>
-            <dd><input type="text" name="language" size="31" placeholder="日本語"></dd>
+            <dd><input type="text" name="birthday" size="38" placeholder="1990年11月11日" maxlength="20" required></dd>
           </div>
 
           <div class="column">
             <dt><span>血液型</span></dt>
             <dd>
-              <select name="blood" id="">
+              <select name="blood" id="" required>
                 <option value="A">A型</option>
                 <option value="B">B型</option>
                 <option value="O">O型</option>
@@ -97,27 +63,117 @@
                 <option value="other">その他</option>
               </select>
               <br>
-              <input type="text" name="blood" size="31" placeholder="コメント">
+              <input type="text" name="blood" size="38" placeholder="コメント" maxlength="20">
             </dd>
           </div>
 
           <div class="column">
-            <dt><span>学歴</span></dt>
+            <dt><span>種族/人種</span></dt>
+            <dd><input type="text" name="race" size="38" placeholder="日本人" maxlength="20" required></dd>
+          </div>
+        </div>
+
+        <!-- 基本事項２ -->
+        <div class="basic-item">
+
+
+          <div class="column">
+            <dt><span>身長</span></dt>
+            <dd><input type="text" name="family-name" size="38" placeholder="170cm" maxlength="20" required></dd>
+          </div>
+
+          <div class="column">
+            <dt><span>体重</span></dt>
+            <dd><input type="text" name="weight" size="38" placeholder="70kg" maxlength="20" required></dd>
+          </div>
+
+          <div class="column">
+            <dt><span>所在地</span></dt>
+            <dd><input type="text" name="home" size="38" placeholder="北海道" maxlength="20" required></dd>
+          </div>
+
+          <div class="column">
+            <dt><span>国籍</span></dt>
+            <dd><input type="text" name="country" size="38" placeholder="日本" maxlength="20" required></dd>
+          </div>
+
+          <div class="column">
+            <dt><span>使用言語</span></dt>
+            <dd><input type="text" name="language" size="38" placeholder="日本語" maxlength="20" required></dd>
+          </div>
+
+          <div class="column">
+            <dt><span>その他</span></dt>
             <dd>
-              <select name="academic-background" id="">
-                <option value="graduate-school">院卒</option>
-                <option value="university">大卒</option>
-                <option value="high-school">高卒</option>
-                <option value="junior-high-school">中卒</option>
-                <option value="preschool">未就学</option>
-                <option value="other">その他</option>
-              </select>
-              <br>
-              <input type="text" name="academic-background" size="31" placeholder="コメント">
+              <textarea name="basic-other" rows="4" cols="37" placeholder="備考欄"></textarea>
+            </dd>
+          </div> 
+
+          </div>
+        </div>
+      </div>
+
+      <!-- 外見 -->
+      <h2 class="beauty-style">見た目</h2>
+      <hr class="beauty-style">
+      <div class="beauty-wrapper">
+        <!-- 見た目１ -->
+        <div class="beauty-item">
+          <div class="column">
+            <dt><span>体型</span></dt>
+            <dd><input type="text" name="father" size="38" placeholder="筋肉質な体つき、手足が長い。" maxlength="20" required></dd>
+          </div>
+
+          <div class="column">
+            <dt><span>肌の色</span></dt>
+            <dd><input type="text" name="skin" size="38" placeholder="日焼けした小麦色の肌。" maxlength="20" required></dd>
+          </div>
+
+          <div class="column">
+            <dt><span>髪型</span></dt>
+            <dd>
+              <input type="text" name="hair" size="38" placeholder="短髪" maxlength="20" required>
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>髪色</span></dt>
+            <dd>
+              <input type="text" name="hair-color" size="38" placeholder="黒髪" maxlength="20">
+            </dd>
+          </div>
+          
+          <div class="column">
+            <dt><span>美しさ</span></dt>
+            <dd>
+              <input type="text" name="beauty" size="38" placeholder="中、かっこ良くもないが醜くもない。" maxlength="20">
+            </dd>
+          </div>          
+        </div>
+
+        <!-- 見た目２ -->
+        <div class="beauty-item">
+          <div class="column">
+            <dt><span>目の形</span></dt>
+            <dd><input type="text" name="eye" size="38" placeholder="くっきり二重" maxlength="20" required></dd>
+          </div>
+
+          <div class="column">
+            <dt><span>目の色</span></dt>
+            <dd><input type="text" name="eye-color" size="38" placeholder="黒目" maxlength="20" required></dd>
+          </div>
+
+
+          <div class="column">
+            <dt><span>その他</span></dt>
+            <dd>
+              <textarea name="beauty-other" rows="4" cols="37" placeholder="備考欄。"></textarea>
             </dd>
           </div>
         </div>
       </div>
+
+
       
       <!-- ＝＝＝＝＝＝＝　家族構成 ＝＝＝＝＝＝＝　-->
       <h2 class="family-style">家族構成</h2>
@@ -128,44 +184,55 @@
           <div class="column">
             <dt><span>父親</span></dt>
             <dd>
-              <label>有</label><input type="radio" name="father">
-              <label>無</label><input type="radio" name="father">
-              <label>その他</label><input type="radio" name="father">
+              <input type="radio" name="father" id="father-yes"><label for="father-yes">有</label>
+              <input type="radio" name="father" id="father-no"><label for="father-no">無</label>
+              <input type="radio" name="father" id="father-other"><label for="father-other">その他</label>
               <br>
-              <input type="text" name="blood" size="31" placeholder="石田勝">
+              <input type="text" name="father" size="38" placeholder="お名前" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>母親</span></dt>
+            <dd>
+              <input type="radio" name="mother" id="mother-yes"><label for="mother-yes">有</label>
+              <input type="radio" name="mother" id="mother-no"><label for="mother-no">無</label>
+              <input type="radio" name="mother" id="mother-other"><label for="mother-other">その他</label>
+              <br>
+              <input type="text" name="mother" size="38" placeholder="お名前" maxlength="20">
             </dd>
           </div>
 
           <div class="column">
             <dt><span>兄弟</span></dt>
             <dd>
-              <label>有</label><input type="radio" name="brother">
-              <label>無</label><input type="radio" name="brother">
-              <label>その他</label><input type="radio" name="brother">
+              <input type="radio" name="brother" id="brother-yes"><label for="brother-yes">有</label>
+              <input type="radio" name="brother" id="brother-no"><label for="brother-no">無</label>
+              <input type="radio" name="brother" id="brother-other"><label for="brother-other">その他</label>
               <br>
-              <input type="text" name="blood" size="31" placeholder="コメント">
+              <input type="text" name="brother" size="38" placeholder="お名前" maxlength="20">
             </dd>
           </div>
 
           <div class="column">
             <dt><span>姉妹</span></dt>
             <dd>
-              <label>有</label><input type="radio" name="sister">
-              <label>無</label><input type="radio" name="sister">
-              <label>その他</label><input type="radio" name="sister">
+              <input type="radio" name="sister" id="sister-yes"><label for="sister-yes">有</label>
+              <input type="radio" name="sister" id="sister-no"><label for="sister-no">無</label>
+              <input type="radio" name="sister" id="sister-other"><label for="sister-other">その他</label>
               <br>
-              <input type="text" name="blood" size="31" placeholder="コメント">
+              <input type="text" name="sister" size="38" placeholder="お名前" maxlength="20">
             </dd>
           </div>
 
           <div class="column">
             <dt><span>恋人</span></dt>
             <dd>
-              <label>有</label><input type="radio" name="lover">
-              <label>無</label><input type="radio" name="lover">
-              <label>その他</label><input type="radio" name="lover">
+              <input type="radio" name="lover" id="lover-yes"><label for="lover-yes">有</label>
+              <input type="radio" name="lover" id="lover-no"><label for="lover-no">無</label>
+              <input type="radio" name="lover" id="lover-other"><label for="lover-other">その他</label>
               <br>
-              <input type="text" name="blood" size="31" placeholder="コメント">
+              <input type="text" name="lover" size="38" placeholder="お名前" maxlength="20">
             </dd>
           </div>
         </div>
@@ -173,47 +240,31 @@
         <!-- 家族構成２ -->
         <div class="family-item">
           <div class="column">
-            <dt><span>母親</span></dt>
-            <dd>
-              <label>有</label><input type="radio" name="mother">
-              <label>無</label><input type="radio" name="mother">
-              <label>その他</label><input type="radio" name="mother">
-              <br>
-              <input type="text" name="blood" size="31" placeholder="石田花（旧姓:川田）">
-            </dd>
-          </div>
-
-          <div class="column">
-            <dt><span>親戚</span></dt>
-            <dd>
-              <label>有</label><input type="radio" name="relatives">
-              <label>無</label><input type="radio" name="relatives">
-              <label>その他</label><input type="radio" name="relatives">
-              <br>
-              <textarea name="relatives" rows="2" cols="30" placeholder="コメント"></textarea>
-            </dd>
-          </div>
-
-
-          <div class="column">
             <dt><span>配偶者</span></dt>
             <dd>
-              <label>有</label><input type="radio" name="spouse">
-              <label>無</label><input type="radio" name="spouse">
-              <label>その他</label><input type="radio" name="spouse">
+              <input type="radio" name="spouse" id="spouse-yes"><label for="spouse-yes">有</label>
+              <input type="radio" name="spouse" id="spouse-no"><label for="spouse-no">無</label>
+              <input type="radio" name="spouse" id="spouse-other"><label for="spouse-other">その他</label>
               <br>
-              <input type="text" name="blood" size="31" placeholder="コメント">
+              <input type="text" name="spouse" size="38" placeholder="お名前" maxlength="20">
             </dd>
           </div>
 
           <div class="column">
             <dt><span>子供</span></dt>
             <dd>
-              <label>有</label><input type="radio" name="child">
-              <label>無</label><input type="radio" name="child">
-              <label>その他</label><input type="radio" name="child">
+              <input type="radio" name="child" id="child-yes"><label for="child-yes">有</label>
+              <input type="radio" name="child" id="child-no"><label for="child-no">無</label>
+              <input type="radio" name="child" id="child-other"><label for="child-other">その他</label>
               <br>
-              <input type="text" name="blood" size="31" placeholder="コメント">
+              <input type="text" name="child" size="38" placeholder="お名前" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>その他</span></dt>
+            <dd>
+              <textarea name="relatives" rows="4" cols="37" placeholder="備考欄"></textarea>
             </dd>
           </div>
         </div>        
@@ -225,7 +276,9 @@
       <br>
 
 
-
+      <div><input type="submit" value="終了"></div>
     </form>
+    
+    <script src="./JS/style.js"></script>
   </body>
 </html>

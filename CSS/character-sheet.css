@@ -1,14 +1,40 @@
+/* 送信ボタン */
+form div {
+  text-align: center;
+}
+
+form div input[type=submit] {
+  background-color: #f2f1ed;
+  border: 1.5px solid black;
+  border-radius: 50px;
+  padding: 2rem 3rem;
+}
+
+form div input[type=submit]:hover {
+  border-color: none;
+  background-color: black;
+  color: white;
+}
+
 /* ＝＝＝＝＝＝＝　全体の装飾　＝＝＝＝＝＝＝ */
 body {
   font-family: "Zen Maru Gothic", serif;
   font-weight: 400;
   font-style: normal;
+  background-color: #f2f1ed;
+  margin: 0;
 }
 
 h1 {
-  font-size: 35px;
-  margin: 50px 0 50px 0;
   text-align: center;
+  font-size: 42px;
+  padding: 50px 0;
+}
+
+hr {
+  margin-bottom: 30px;
+  border: 1.5px solid #80aba9;
+  margin: 0;
 }
 
 h2 {
@@ -20,29 +46,44 @@ h2 {
   letter-spacing: 5px;
 }
 
-hr {
-  margin-bottom: 30px;
-  border: 1.5px solid #80aba9;
-  margin: 0;
-}
-
-.basic-wrapper, .family-wrapper {
+.basic-wrapper, .family-wrapper,
+.beauty-wrapper
+ {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding: 50px;
+  column-gap: 3rem;
 }
 
 span {
-  font-size: 18px;
+  font-size: 19px;
 }
 
 .column {
   display: flex;
   justify-content: flex-end;
+  /* 要素間の隙間の設定 */
+  column-gap: 1rem;
 }
 
+dd {
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 5px;
+}
 
+input[placeholder], textarea {
+  font-family: "Zen Maru Gothic", serif;
+  border-radius: 5px;
+}
 
+select {
+  border-radius: 5px;
+}
+
+input {
+  margin-top: 1.5px;
+}
 
 
 
@@ -56,27 +97,46 @@ span {
   background-color: #d4dddd;
 }
 
-.basic-item input {
-  border-color: #d4dddd;
+.basic-item input, .basic-item textarea {
+  border: 1.5px solid #80aba9;
 }
+
+
+
+/* ＝＝＝＝＝＝＝　見た目のスタイル　＝＝＝＝＝＝＝ */
+.beauty-style {
+  text-shadow: 3px 3px 3px #a59aca;
+  border-color: #a59aca;
+}
+
+.beauty-wrapper {
+  background-color: #d5d2de;
+}
+
+.beauty-item input, .beauty-item textarea {
+  border: 1.5px solid #aba1cd;
+}
+
+
 
 /* ＝＝＝＝＝＝＝　家族構成のスタイル　＝＝＝＝＝＝＝ */
 .family-style {
-  text-shadow: 3px 3px 3px #ed6a73;
-  border-color: #ed6a73;
+  text-shadow: 3px 3px 3px #db858b;
+  border-color: #e79499;
 }
 
 .family-wrapper {
   background-color: #f7edee;
 }
 
-.family-item input, textarea {
+.family-item input, .family-item textarea {
   border-color: #f7edee;
+  border: 1.5px solid #e79499;
 }
 
 
 
-
+/* ＝＝＝＝＝＝＝　選択ボタンの表示　＝＝＝＝＝＝＝ */
 .column dd input[type=radio] {
   display: none;
 }
@@ -85,9 +145,18 @@ span {
   cursor: pointer;
   padding: 0.5rem;
   color: #333;
+
 }
 
 .column dd input[type=radio]:checked+label {
-  border: 1px solid black;
-  background-color: white;
+  border-radius: 40px;
+  border: 1.6px solid rgb(215, 44, 44);
+  color: black;
+  padding: 0 6px;
+
 }
+
+
+
+
+
