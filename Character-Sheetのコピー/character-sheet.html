@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>キャラクターシート.page1</title>
+    <meta name="description" content="キャラクターシート１ページ目">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./CSS/character-sheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Noto+Sans+JP&family=Noto+Serif+JP&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    </head>
+
+  <body>
+    <h1>キャラクターシート</h1>
+    <form id="form" action="">
+
+      <!-- ＝＝＝＝＝＝＝　基本事項 ＝＝＝＝＝＝＝　-->
+      <h2 class="basic-style">基本情報</h2>
+      <hr class="basic-style">
+
+      <!-- 基本事項１ -->
+      <div class="basic-wrapper">
+        <div class="basic-item">
+          <div class="column"> 
+            <dt><span>名前</span></dt>
+            <dd><input type="text" name="name" size="38" placeholder="石田石造" maxlength="20" required></dd>
+          </div> 
+
+          <div class="column"> 
+            <dt><span>別名/あだ名</span></dt>
+            <dd><input type="text" name="ada-name" size="38" placeholder="石像" maxlength="20" required></dd>
+          </div> 
+
+          <div class="column">
+            <dt><span>性別</span></dt>
+            <dd>
+              <input type="radio" name="gender" id="gender-man"><label for="gender-man">男</label>
+              <input type="radio" name="gender" id="gender-women"><label for="gender-women">女</label>
+              <input type="radio" name="gender" id="gender-other"><label for="gender-other">その他</label>
+              <br>
+              <input type="text" name="gender" size="38" placeholder="コメント" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">         
+            <dt><span>肉体年齢</span></dt>
+            <dd><input type="text" name="beauty" size="38" placeholder="35" maxlength="20" required></dd>
+          </div>
+
+          <div class="column">         
+            <dt><span>精神年齢</span></dt>
+            <dd><input type="text" name="beauty" size="38" placeholder="35" maxlength="20" required></dd>
+          </div>
+
+          <div class="column">
+            <dt><span>生年月日</span></dt>
+            <dd><input type="text" name="birthday" size="38" placeholder="1990年11月11日" maxlength="20" required></dd>
+          </div>
+
+          <div class="column">
+            <dt><span>血液型</span></dt>
+            <dd>
+              <select name="blood" id="" required>
+                <option value="A">A型</option>
+                <option value="B">B型</option>
+                <option value="O">O型</option>
+                <option value="AB">AB型</option>
+                <option value="other">その他</option>
+              </select>
+              <br>
+              <input type="text" name="blood" size="38" placeholder="コメント" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>学歴</span></dt>
+            <dd>
+              <select name="Academic background" id="" required>
+                <option value="graduate school">院卒</option>
+                <option value="university">大卒</option>
+                <option value="high school">高卒</option>
+                <option value="junior high school">中卒</option>
+                <option value="dropout">中退</option>
+                <option value="other">その他</option>
+              </select>
+              <br>
+              <input type="text" name="Academic background" size="38" placeholder="コメント" maxlength="20">
+            </dd>
+          </div>
+        </div>
+
+        <!-- 基本事項２ -->
+        <div class="basic-item">
+
+          <div class="column">
+            <dt><span>種族/人種</span></dt>
+            <dd><input type="text" name="race" size="38" placeholder="日本人" maxlength="20" required></dd>
+          </div>
+
+          <div class="column">
+            <dt><span>身長</span></dt>
+            <dd><input type="text" name="family-name" size="38" placeholder="170cm" maxlength="20" required></dd>
+          </div>
+
+          <div class="column">
+            <dt><span>体重</span></dt>
+            <dd><input type="text" name="weight" size="38" placeholder="70kg" maxlength="20" required></dd>
+          </div>
+
+          <div class="column">
+            <dt><span>所在地</span></dt>
+            <dd><input type="text" name="home" size="38" placeholder="北海道" maxlength="20" required></dd>
+          </div>
+
+          <div class="column">
+            <dt><span>国籍</span></dt>
+            <dd><input type="text" name="country" size="38" placeholder="日本" maxlength="20" required></dd>
+          </div>
+
+          <div class="column">
+            <dt><span>使用言語</span></dt>
+            <dd><input type="text" name="language" size="38" placeholder="日本語" maxlength="20" required></dd>
+          </div>
+
+          <div class="column">
+            <dt><span>その他</span></dt>
+            <dd>
+              <textarea name="basic-other" rows="6" cols="37" placeholder="備考欄"></textarea>
+            </dd>
+          </div> 
+
+          </div>
+        </div>
+      </div>
+
+
+      
+      <!-- ＝＝＝＝＝＝＝　家族構成 ＝＝＝＝＝＝＝　-->
+      <h2 class="family-style">家族構成</h2>
+      <hr class="family-style">
+      <div class="family-wrapper">
+        <!-- 家族構成１ -->
+        <div class="family-item">
+          <div class="column">
+            <dt><span>父親</span></dt>
+            <dd>
+              <input type="radio" name="father" id="father-yes"><label for="father-yes">有</label>
+              <input type="radio" name="father" id="father-no"><label for="father-no">無</label>
+              <input type="radio" name="father" id="father-other"><label for="father-other">その他</label>
+              <br>
+              <input type="text" name="father" size="38" placeholder="お名前" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>母親</span></dt>
+            <dd>
+              <input type="radio" name="mother" id="mother-yes"><label for="mother-yes">有</label>
+              <input type="radio" name="mother" id="mother-no"><label for="mother-no">無</label>
+              <input type="radio" name="mother" id="mother-other"><label for="mother-other">その他</label>
+              <br>
+              <input type="text" name="mother" size="38" placeholder="お名前" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>兄弟</span></dt>
+            <dd>
+              <input type="radio" name="brother" id="brother-yes"><label for="brother-yes">有</label>
+              <input type="radio" name="brother" id="brother-no"><label for="brother-no">無</label>
+              <input type="radio" name="brother" id="brother-other"><label for="brother-other">その他</label>
+              <br>
+              <input type="text" name="brother" size="38" placeholder="お名前" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>姉妹</span></dt>
+            <dd>
+              <input type="radio" name="sister" id="sister-yes"><label for="sister-yes">有</label>
+              <input type="radio" name="sister" id="sister-no"><label for="sister-no">無</label>
+              <input type="radio" name="sister" id="sister-other"><label for="sister-other">その他</label>
+              <br>
+              <input type="text" name="sister" size="38" placeholder="お名前" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>恋人</span></dt>
+            <dd>
+              <input type="radio" name="lover" id="lover-yes"><label for="lover-yes">有</label>
+              <input type="radio" name="lover" id="lover-no"><label for="lover-no">無</label>
+              <input type="radio" name="lover" id="lover-other"><label for="lover-other">その他</label>
+              <br>
+              <input type="text" name="lover" size="38" placeholder="お名前" maxlength="20">
+            </dd>
+          </div>
+        </div>
+
+        <!-- 家族構成２ -->
+        <div class="family-item">
+          <div class="column">
+            <dt><span>配偶者</span></dt>
+            <dd>
+              <input type="radio" name="spouse" id="spouse-yes"><label for="spouse-yes">有</label>
+              <input type="radio" name="spouse" id="spouse-no"><label for="spouse-no">無</label>
+              <input type="radio" name="spouse" id="spouse-other"><label for="spouse-other">その他</label>
+              <br>
+              <input type="text" name="spouse" size="38" placeholder="お名前" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>子供</span></dt>
+            <dd>
+              <input type="radio" name="child" id="child-yes"><label for="child-yes">有</label>
+              <input type="radio" name="child" id="child-no"><label for="child-no">無</label>
+              <input type="radio" name="child" id="child-other"><label for="child-other">その他</label>
+              <br>
+              <input type="text" name="child" size="38" placeholder="お名前" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>その他</span></dt>
+            <dd>
+              <textarea name="relatives" rows="7" cols="37" placeholder="備考欄"></textarea>
+            </dd>
+          </div>
+        </div>        
+      </div>
+
+
+
+      <!--　＝＝＝＝＝＝＝ 外見 ＝＝＝＝＝＝＝　-->
+      <h2 class="beauty-style">見た目</h2>
+      <hr class="beauty-style">
+      <div class="beauty-wrapper">
+
+        <!-- 見た目１ -->
+        <div class="beauty-item">
+          <div class="column">
+            <dt><span>体型</span></dt>
+            <dd>
+              <input type="radio" name="body" id="yase"><label for="yase">痩せ</label>
+              <input type="radio" name="body" id="yase-tyuuzei" checked><label for="yase-tyuuzei">・</label>
+              <input type="radio" name="body" id="tyuuzei"><label for="tyuuzei">中背</label>
+              <input type="radio" name="body" id="tyuuzei-kobutori"><label for="tyuuzei-kobutori">・</label>
+              <input type="radio" name="body" id="kobutori"><label for="kobutori">小太り</label>
+              <input type="radio" name="body" id="kobutori-kyokann"><label for="kobutori-kyokann">・</label>
+              <input type="radio" name="body" id="kyokann"><label for="kyokann">巨漢</label>
+              <br>
+              <input type="radio" name="body" id="kyokann-kinnniku"><label for="kyokann-kinnniku">・</label>
+              <input type="radio" name="body" id="kinnniku"><label for="kinnniku">筋肉</label>
+              <input type="radio" name="body" id="kinnniku-gurama"><label for="kinnniku-gurama">・</label>
+              <input type="radio" name="body" id="gurama"><label for="gurama">グラマー</label>
+              <input type="radio" name="body" id="gurama-jinngai"><label for="gurama-jinngai">・</label>
+              <input type="radio" name="body" id="jinngai"><label for="jinngai">人外</label>
+              <br>
+              <input type="text" name="body" size="38" placeholder="コメント" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>肌の色</span></dt>
+            <dd>
+              <input type="radio" name="skin" id="siro"><label for="siro">白</label>
+              <input type="radio" name="skin" id="siro-kiiro" checked><label for="siro-kiiro">・</label>
+              <input type="radio" name="skin" id="kiiro"><label for="kiiro">黄色</label>
+              <input type="radio" name="skin" id="kiiro-kassyoku"><label for="kiiro-kassyoku">・</label>
+              <input type="radio" name="skin" id="kassyoku"><label for="kassyoku">褐色</label>
+              <input type="radio" name="skin" id="kassyoku-kegawa"><label for="kassyoku-kegawa">・</label>
+              <input type="radio" name="skin" id="kegawa"><label for="kegawa">毛皮</label>
+              <input type="radio" name="skin" id="kegawa-uroko"><label for="kegawa-uroko">・</label>
+              <br>
+              <input type="radio" name="skin" id="uroko"><label for="uroko">鱗</label>
+              <input type="radio" name="skin" id="uroko-hane"><label for="uroko-hane">・</label>
+              <input type="radio" name="skin" id="hane"><label for="hane">羽</label>
+              <input type="radio" name="skin" id="hane-hennsinn"><label for="hane-hennsinn">・</label>
+              <input type="radio" name="skin" id="hennsinn"><label for="hennsinn">変身</label>
+              <br>
+              <input type="text" name="skin" size="38" placeholder="コメント" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>顔の形</span></dt>
+            <dd>
+              <input type="radio" name="face" id="maru"><label for="maru">丸顔</label>
+              <input type="radio" name="face" id="maru-tamago"><label for="maru-tamago">・</label>
+              <input type="radio" name="face" id="tamago"><label for="tamago">卵形</label>
+              <input type="radio" name="face" id="tamago-omonaga"><label for="tamago-omonaga">・</label>
+              <input type="radio" name="face" id="omonaga"><label for="omonaga">面長</label>
+              <input type="radio" name="face" id="omonaga-sikaku"><label for="omonaga-sikaku">・</label>
+              <input type="radio" name="face" id="sikaku"><label for="sikaku">四角</label>
+              <input type="radio" name="face" id="sikaku-seibutu"><label for="sikaku-seibutu">・</label>
+              <br>
+              <input type="radio" name="face" id="seibutu"><label for="seibutu">生物</label>
+              <br>
+              <input type="text" name="face" size="38" placeholder="コメント" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>頭髪（色）</span></dt>
+            <dd>
+              <input type="checkbox" name="head-color" id="kuro"><label for="kuro">黒</label>
+              <input type="checkbox" name="head-color" id="kuro-koge"><label for="kuro-koge">・</label>
+              <input type="checkbox" name="head-color" id="koge"><label for="koge">焦茶</label>
+              <input type="checkbox" name="head-color" id="koge-tya"><label for="koge-tya">・</label>
+              <input type="checkbox" name="head-color" id="tya"><label for="tya">茶（脱色）</label>
+              <input type="checkbox" name="head-color" id="tya-kinn"><label for="tya-kinn">・</label>
+              <br>
+              <input type="checkbox" name="head-color" id="kinn"><label for="kinn">金</label>
+              <input type="checkbox" name="head-color" id="kinn-siro"><label for="kinn-siro">・</label>
+              <input type="checkbox" name="head-color" id="head-siro"><label for="head-siro">白</label>
+              <input type="checkbox" name="head-color" id="siro-aka"><label for="siro-aka">・</label>
+              <input type="checkbox" name="head-color" id="aka"><label for="aka">赤</label>
+              <input type="checkbox" name="head-color" id="aka-kuri"><label for="aka-kuri">・</label>
+              <input type="checkbox" name="head-color" id="kuri"><label for="kuri">栗</label>
+              <br>
+              <input type="text" name="head-color" size="38" placeholder="コメント" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>髪型</span></dt>
+            <dd>
+              <input type="checkbox" name="hair-style" id="tann"><label for="tann">短</label>
+              <input type="checkbox" name="hair-style" id="naga-tann"><label for="naga-tann">・</label>
+              <input type="checkbox" name="hair-style" id="naga"><label for="naga">長</label>
+              <input type="checkbox" name="hair-style" id="tyou-naga"><label for="tyou-naga">・</label>
+              <input type="checkbox" name="hair-style" id="tyou"><label for="tyou">超長</label>
+              <input type="checkbox" name="hair-style" id="syukumou-tyou"><label for="syukumou-tyou">・</label>
+              <input type="checkbox" name="hair-style" id="syukumou"><label for="syukumou">縮毛</label>
+              <input type="checkbox" name="hair-style" id="sukinn-syukumou"><label for="sukinn-syukumou">・</label>
+              <br>
+              <input type="checkbox" name="hair-style" id="sukinn"><label for="sukinn">スキン</label>
+              <input type="checkbox" name="hair-style" id="pama-sukinn"><label for="pama-sukinn">・</label>
+              <input type="checkbox" name="hair-style" id="pama"><label for="pama">パーマ</label>
+              <input type="checkbox" name="hair-style" id="ponite-pama"><label for="ponite-pama">・</label>
+              <input type="checkbox" name="hair-style" id="ponite"><label for="ponite">ポニテ</label>
+              <br>
+              <input type="checkbox" name="hair-style" id="tuinn-ponite"><label for="tuinn-ponite">・</label>
+              <input type="checkbox" name="hair-style" id="tuinn"><label for="tuinn">ツイン</label>
+              <br>
+              <input type="text" name="hair-style" size="38" placeholder="コメント" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>目の形</span></dt>
+            <dd>
+              <input type="checkbox" name="eye" id="dai"><label for="dai">大</label>
+              <input type="checkbox" name="eye" id="syou-dai"><label for="syou-dai">・</label>
+              <input type="checkbox" name="eye" id="syou"><label for="syou">小</label>
+              <input type="checkbox" name="eye" id="futuu-syou"><label for="futuu-syou">・</label>
+              <input type="checkbox" name="eye" id="futuu"><label for="futuu">普通</label>
+              <input type="checkbox" name="eye" id="hitoe-futuu"><label for="hitoe-futuu">・</label>
+              <input type="checkbox" name="eye" id="hitoe"><label for="hitoe">一重</label>
+              <br>
+              <input type="checkbox" name="eye" id="futae-hitoe"><label for="futae-hitoe">・</label>
+              <input type="checkbox" name="eye" id="fuate"><label for="fuate">二重</label>
+              <input type="checkbox" name="eye" id="hare-futae"><label for="hare-futae">・</label>
+              <input type="checkbox" name="eye" id="hare"><label for="hare">腫れ目</label>
+              <input type="checkbox" name="eye" id="tare-hare"><label for="tare-hare">・</label>
+              <input type="checkbox" name="eye" id="tare"><label for="tare">タレ目</label>
+              <br>
+              <input type="checkbox" name="eye" id="turi-tare"><label for="turi-tare">・</label>
+              <input type="checkbox" name="eye" id="turi"><label for="turi">つり目</label>
+              <input type="checkbox" name="eye" id="sannpaku-turi"><label for="sannpaku-turi">・</label>
+              <input type="checkbox" name="eye" id="sannpaku"><label for="sannpaku">三白</label>
+              <input type="checkbox" name="eye" id="seibutu-sannpaku"><label for="seibutu-sannpaku">・</label>
+              <input type="checkbox" name="eye" id="eye-seibutu"><label for="eye-seibutu">生物</label>
+              <br>
+              <input type="text" name="eye" size="38" placeholder="コメント" maxlength="20">
+            </dd>
+          </div>
+        </div>
+
+      <!-- 見た目２ -->
+      <div class="beauty-item">
+
+        <div class="column">
+          <dt><span>目の色</span></dt>
+          <dd>
+            <input type="text" name="eye-color" size="38" placeholder="黒色" maxlength="20">
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>視力</span></dt>
+          <dd>
+            <input type="radio" name="siryoku" id="siryoku-tyou"><label for="siryoku-tyou">超良</label>
+            <input type="radio" name="siryoku" id="siryoku-tyou-yoi"><label for="siryoku-tyou-yoi">・</label>
+            <input type="radio" name="siryoku" id="siryoku-yoi"><label for="siryoku-yoi">良</label>
+            <input type="radio" name="siryoku" id="siryoku-yoi-warui"><label for="siryoku-yoi-warui">・</label>
+            <input type="radio" name="siryoku" id="siryoku-warui"><label for="siryoku-warui">悪</label>
+            <input type="radio" name="siryoku-hoka" id="megane"><label for="megane">眼鏡</label>
+            <input type="radio" name="siryoku-hoka" id="konntakuto"><label for="konntakuto">コンタクト</label>
+            <br>
+            <input type="text" name="" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>耳</span></dt>
+          <dd>
+            <input type="radio" name="ear" id="ninngenn-mimi"><label for="ninngenn-mimi">人間</label>
+            <input type="radio" name="ear" id="erufu-mimi"><label for="erufu-mimi">エルフ</label>
+            <input type="radio" name="ear" id="kemono-mimi"><label for="kemono-mimi">獣</label>
+            <br>
+            <input type="text" name="ear" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>付属</span></dt>
+          <dd>
+            <input type="radio" name="option" id="tubasa"><label for="tubasa">翼</label>
+            <input type="radio" name="option" id="o"><label for="o">尾</label>
+            <input type="radio" name="option" id="tuno"><label for="tuno">角</label>
+            <br>
+            <input type="text" name="option" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>口</span></dt>
+          <dd>
+            <input type="radio" name="kuti" id="kuti-atui"><label for="kuti-atui">厚</label>
+            <input type="radio" name="kuti" id="kuti-usui-atui"><label for="kuti-usui-atui">・</label>
+            <input type="radio" name="kuti" id="kuti-usui"><label for="kuti-usui">薄</label>
+            <input type="radio" name="kuti" id="kuti-syou-usui"><label for="kuti-syou-usui">・</label>
+            <input type="radio" name="kuti" id="kuti-dai"><label for="kuti-dai">大</label>
+            <input type="radio" name="kuti" id="kuti-syou-dai"><label for="kuti-syou-dai">・</label>
+            <input type="radio" name="kuti" id="kuti-syou"><label for="kuti-syou">小</label>
+            <input type="radio" name="kuti" id="kiba-syou"><label for="kiba-syou">・</label>
+            <input type="radio" name="kuti" id="kiba"><label for="kiba">牙</label>
+            <br>
+            <input type="text" name="kuti" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>鼻</span></dt>
+          <dd>
+            <input type="radio" name="hana" id="hana-takai"><label for="hana-takai">高</label>
+            <input type="radio" name="hana" id="hana-takai-tyuu"><label for="hana-takai-tyuu">・</label>
+            <input type="radio" name="hana" id="hana-tyuu"><label for="hana-tyuu">中</label>
+            <input type="radio" name="hana" id="hana-tyuu-tei"><label for="hana-tyuu-tei">・</label>
+            <input type="radio" name="hana" id="hana-hikui"><label for="hana-hikui">低</label>
+            <input type="radio" name="hana" id="hana-hikui-wasi"><label for="hana-hikui-wasi">・</label>
+            <input type="radio" name="hana" id="hana-wasi"><label for="hana-wasi">鷲</label>
+            <br>
+            <input type="text" name="hana" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>健康状態</span></dt>
+          <dd>
+            <input type="radio" name="kennkou" id="good"><label for="good">良</label>
+            <input type="radio" name="kennkou" id="bad"><label for="bad">悪</label>
+            <br>
+            <input type="text" name="kennkou" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>特記事項</span></dt>
+          <dd>
+            <textarea name="beauty-other" rows="7" cols="37" placeholder="コメント"></textarea>
+          </dd>
+        </div>
+      </div>
+    </div>
+
+
+      <!--　＝＝＝＝＝＝＝ 性格 ＝＝＝＝＝＝＝　-->
+      <h2 class="seikaku-style">性格・傾向</h2>
+      <hr class="seikaku-style">
+    <div class="seikaku-wrapper">
+      <!-- 性格１ -->
+      <div class="seikaku-item">
+        <div class="column">
+          <dt><span>一人称</span></dt>
+          <dd>
+            <input type="radio" name="itininnsyou" id="watasi"><label for="watasi">私</label>
+            <input type="radio" name="itininnsyou" id="watasi1"><label for="watasi1">わたし</label>
+            <input type="radio" name="itininnsyou" id="boku"><label for="boku">僕</label>
+            <input type="radio" name="itininnsyou" id="boku1"><label for="boku1">ボク</label>
+            <input type="radio" name="itininnsyou" id="ore"><label for="ore">俺</label>
+            <input type="radio" name="itininnsyou" id="ore1"><label for="ore1">オレ</label>
+            <input type="radio" name="itininnsyou" id="ware"><label for="ware">おれ</label>
+            <br>
+            <input type="text" name="itininnsyou" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>二人称</span></dt>
+          <dd>
+            <input type="radio" name="nininnsyou" id="kimi"><label for="kimi">君（きみ・キミ）</label>
+            <input type="radio" name="nininnsyou" id="anata"><label for="anata">あなた</label>
+            <input type="radio" name="nininnsyou" id="omae"><label for="omae">おまえ</label>
+            <input type="radio" name="nininnsyou" id="nannji"><label for="nannji">汝</label>
+            <br>
+            <input type="radio" name="nininnsyou" id="sonata"><label for="sonata">其方</label>
+            <input type="radio" name="nininnsyou" id="kisama"><label for="kisama">貴様</label>
+            <input type="radio" name="nininnsyou" id="kidenn"><label for="kidenn">貴殿</label>
+            <br>
+            <input type="text" name="nininnsyou" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>癖・仕草・口癖</span></dt>
+          <dd>
+            <textarea name="kuse-kutiguse-tou" rows="4" cols="37" placeholder="コメント"></textarea>
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>口調・語尾</span></dt>
+          <dd>
+            <textarea name="kutyou-gobi" rows="4" cols="37" placeholder="コメント"></textarea>
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>主義・主張</span></dt>
+          <dd>
+            <input type="checkbox" name="porisi" id="gouri"><label for="gouri">合理主義</label>
+            <input type="checkbox" name="porisi" id="heiwa"><label for="heiwa">平和主義</label>
+            <input type="checkbox" name="porisi" id="kannpeki"><label for="kannpeki">完璧主義</label>
+            <br>
+            <input type="checkbox" name="porisi" id="haikinn"><label for="haikinn">拝金主義</label>
+            <input type="checkbox" name="porisi" id="kinnyoku"><label for="kinnyoku">禁欲主義</label>
+            <input type="checkbox" name="porisi" id="kairaku"><label for="kairaku">快楽主義</label>
+            <br>
+            <input type="checkbox" name="porisi" id="jituryoku"><label for="jituryoku">実力主義</label>
+            <input type="checkbox" name="porisi" id="hakuai"><label for="hakuai">博愛主義</label>
+            <input type="checkbox" name="porisi" id="himitu"><label for="himitu">秘密主義</label>
+            <br>
+            <input type="checkbox" name="porisi" id="rakkann"><label for="rakkann">楽観主義</label>
+            <br>
+            <input type="text" name="porisi" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>長所</span></dt>
+          <dd>
+            <textarea name="tyousyo" rows="4" cols="37" placeholder="コメント"></textarea>
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>短所</span></dt>
+          <dd>
+            <textarea name="ktannsyo" rows="4" cols="37" placeholder="コメント"></textarea>
+          </dd>
+        </div>
+      </div>
+
+      <!-- 性格２ -->
+      <div class="seikaku-item">
+        <div class="column">
+          <div class="or-two">
+            <p>外交的</p>
+            <input type="radio" name="soto-num" id="soto5"><label for="soto5">5</label>
+            <input type="radio" name="soto-num" id="soto4"><label for="soto4">4</label>
+            <input type="radio" name="soto-num" id="soto3"><label for="soto3">3</label>
+            <input type="radio" name="soto-num" id="soto2"><label for="soto2">2</label>
+            <input type="radio" name="soto-num" id="soto1"><label for="soto1">1</label>
+            <p>内向的</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="or-two">
+            <p>攻撃的</p>
+            <input type="radio" name="kougeki-num" id="kougeki5"><label for="kougeki5">5</label>
+            <input type="radio" name="kougeki-num" id="kougeki4"><label for="kougeki4">4</label>
+            <input type="radio" name="kougeki-num" id="kougeki3"><label for="kougeki3">3</label>
+            <input type="radio" name="kougeki-num" id="kougeki2"><label for="kougeki2">2</label>
+            <input type="radio" name="kougeki-num" id="kougeki1"><label for="kougeki1">1</label>
+            <p>平和的</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="or-two">
+            <p>厳格　</p>
+            <input type="radio" name="gennkaku-num" id="gennkaku5"><label for="gennkaku5">5</label>
+            <input type="radio" name="gennkaku-num" id="gennkaku4"><label for="gennkaku4">4</label>
+            <input type="radio" name="gennkaku-num" id="gennkaku3"><label for="gennkaku3">3</label>
+            <input type="radio" name="gennkaku-num" id="gennkaku2"><label for="gennkaku2">2</label>
+            <input type="radio" name="gennkaku-num" id="gennkaku1"><label for="gennkaku1">1</label>
+            <p>ルーズ</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="or-two">
+            <p>素直　</p>
+            <input type="radio" name="sunao-num" id="sunao5"><label for="sunao5">5</label>
+            <input type="radio" name="sunao-num" id="sunao4"><label for="sunao4">4</label>
+            <input type="radio" name="sunao-num" id="sunao3"><label for="sunao3">3</label>
+            <input type="radio" name="sunao-num" id="sunao2"><label for="sunao2">2</label>
+            <input type="radio" name="sunao-num" id="sunao1"><label for="sunao1">1</label>
+            <p>腹黒　</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="or-two">
+            <p>排他的</p>
+            <input type="radio" name="haita-num" id="haita5"><label for="haita5">5</label>
+            <input type="radio" name="haita-num" id="haita4"><label for="haita4">4</label>
+            <input type="radio" name="haita-num" id="haita3"><label for="haita3">3</label>
+            <input type="radio" name="haita-num" id="haita2"><label for="haita2">2</label>
+            <input type="radio" name="haita-num" id="haita1"><label for="haita1">1</label>
+            <p>融和的</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="or-two">
+            <p>正攻法</p>
+            <input type="radio" name="seikouhou-num" id="seikouhou5"><label for="seikouhou5">5</label>
+            <input type="radio" name="seikouhou-num" id="seikouhou4"><label for="seikouhou4">4</label>
+            <input type="radio" name="seikouhou-num" id="seikouhou3"><label for="seikouhou3">3</label>
+            <input type="radio" name="seikouhou-num" id="seikouhou2"><label for="seikouhou2">2</label>
+            <input type="radio" name="seikouhou-num" id="seikouhou1"><label for="seikouhou1">1</label>
+            <p>姑息　</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="or-two">
+            <p>理性的</p>
+            <input type="radio" name="risei-num" id="risei5"><label for="risei5">5</label>
+            <input type="radio" name="risei-num" id="risei4"><label for="risei4">4</label>
+            <input type="radio" name="risei-num" id="risei3"><label for="risei3">3</label>
+            <input type="radio" name="risei-num" id="risei2"><label for="risei2">2</label>
+            <input type="radio" name="risei-num" id="risei1"><label for="risei1">1</label>
+            <p>感情的</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="or-two">
+            <p>利己的</p>
+            <input type="radio" name="riko-num" id="riko5"><label for="riko5">5</label>
+            <input type="radio" name="riko-num" id="riko4"><label for="riko4">4</label>
+            <input type="radio" name="riko-num" id="riko3"><label for="riko3">3</label>
+            <input type="radio" name="riko-num" id="riko2"><label for="riko2">2</label>
+            <input type="radio" name="riko-num" id="riko1"><label for="riko1">1</label>
+            <p>犠牲的</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="or-two">
+            <p>進歩的</p>
+            <input type="radio" name="sinnpo-num" id="sinnpo5"><label for="sinnpo5">5</label>
+            <input type="radio" name="sinnpo-num" id="sinnpo4"><label for="sinnpo4">4</label>
+            <input type="radio" name="sinnpo-num" id="sinnpo3"><label for="sinnpo3">3</label>
+            <input type="radio" name="sinnpo-num" id="sinnpo2"><label for="sinnpo2">2</label>
+            <input type="radio" name="sinnpo-num" id="sinnpo1"><label for="sinnpo1">1</label>
+            <p>保守的</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="or-two">
+            <p>積極的</p>
+            <input type="radio" name="sekkyoku-num" id="sekkyoku5"><label for="sekkyoku5">5</label>
+            <input type="radio" name="sekkyoku-num" id="sekkyoku4"><label for="sekkyoku4">4</label>
+            <input type="radio" name="sekkyoku-num" id="sekkyoku3"><label for="sekkyoku3">3</label>
+            <input type="radio" name="sekkyoku-num" id="sekkyoku2"><label for="sekkyoku2">2</label>
+            <input type="radio" name="sekkyoku-num" id="sekkyoku1"><label for="sekkyoku1">1</label>
+            <p>消極的</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="or-two">
+            <p>温和　</p>
+            <input type="radio" name="nekketu-num" id="nekketu5"><label for="nekketu5">5</label>
+            <input type="radio" name="nekketu-num" id="nekketu4"><label for="nekketu4">4</label>
+            <input type="radio" name="nekketu-num" id="nekketu3"><label for="nekketu3">3</label>
+            <input type="radio" name="nekketu-num" id="nekketu2"><label for="nekketu2">2</label>
+            <input type="radio" name="nekketu-num" id="nekketu1"><label for="nekketu1">1</label>
+            <p>冷酷　</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="or-two">
+            <p>勇敢　</p>
+            <input type="radio" name="tuyoki-num" id="tuyoki5"><label for="tuyoki5">5</label>
+            <input type="radio" name="tuyoki-num" id="tuyoki4"><label for="tuyoki4">4</label>
+            <input type="radio" name="tuyoki-num" id="tuyoki3"><label for="tuyoki3">3</label>
+            <input type="radio" name="tuyoki-num" id="tuyoki2"><label for="tuyoki2">2</label>
+            <input type="radio" name="tuyoki-num" id="tuyoki1"><label for="tuyoki1">1</label>
+            <p>臆病　</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="or-two">
+            <p>慎重　</p>
+            <input type="radio" name="sinntyou-num" id="sinntyou5"><label for="sinntyou5">5</label>
+            <input type="radio" name="sinntyou-num" id="sinntyou4"><label for="sinntyou4">4</label>
+            <input type="radio" name="sinntyou-num" id="sinntyou3"><label for="sinntyou3">3</label>
+            <input type="radio" name="sinntyou-num" id="sinntyou2"><label for="sinntyou2">2</label>
+            <input type="radio" name="sinntyou-num" id="sinntyou1"><label for="sinntyou1">1</label>
+            <p>軽率　</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="or-two">
+            <p>敏感　</p>
+            <input type="radio" name="binnkann-num" id="binnkann5"><label for="binnkann5">5</label>
+            <input type="radio" name="binnkann-num" id="binnkann4"><label for="binnkann4">4</label>
+            <input type="radio" name="binnkann-num" id="binnkann3"><label for="binnkann3">3</label>
+            <input type="radio" name="binnkann-num" id="binnkann2"><label for="binnkann2">2</label>
+            <input type="radio" name="binnkann-num" id="binnkann1"><label for="binnkann1">1</label>
+            <p>鈍感　</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="or-two">
+            <p>派手　</p>
+            <input type="radio" name="sappari-num" id="sappari5"><label for="sappari5">5</label>
+            <input type="radio" name="sappari-num" id="sappari4"><label for="sappari4">4</label>
+            <input type="radio" name="sappari-num" id="sappari3"><label for="sappari3">3</label>
+            <input type="radio" name="sappari-num" id="sappari2"><label for="sappari2">2</label>
+            <input type="radio" name="sappari-num" id="sappari1"><label for="sappari1">1</label>
+            <p>地味　</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="or-two">
+            <p>潔癖　</p>
+            <input type="radio" name="keppeki-num" id="keppeki5"><label for="keppeki5">5</label>
+            <input type="radio" name="keppeki-num" id="keppeki4"><label for="keppeki4">4</label>
+            <input type="radio" name="keppeki-num" id="keppeki3"><label for="keppeki3">3</label>
+            <input type="radio" name="keppeki-num" id="keppeki2"><label for="keppeki2">2</label>
+            <input type="radio" name="keppeki-num" id="keppeki1"><label for="keppeki1">1</label>
+            <p>無頓着</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="or-two">
+            <p>幸運　</p>
+            <input type="radio" name="unn-num" id="unn5"><label for="unn5">5</label>
+            <input type="radio" name="unn-num" id="unn4"><label for="unn4">4</label>
+            <input type="radio" name="unn-num" id="unn3"><label for="unn3">3</label>
+            <input type="radio" name="unn-num" id="unn2"><label for="unn2">2</label>
+            <input type="radio" name="unn-num" id="unn1"><label for="unn1">1</label>
+            <p>不運　</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="or-two">
+            <p>強欲　</p>
+            <input type="radio" name="gouyoku-num" id="gouyoku5"><label for="gouyoku5">5</label>
+            <input type="radio" name="gouyoku-num" id="gouyoku4"><label for="gouyoku4">4</label>
+            <input type="radio" name="gouyoku-num" id="gouyoku3"><label for="gouyoku3">3</label>
+            <input type="radio" name="gouyoku-num" id="gouyoku2"><label for="gouyoku2">2</label>
+            <input type="radio" name="gouyoku-num" id="gouyoku1"><label for="gouyoku1">1</label>
+            <p>無欲　</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- 性格３（キーワード） -->
+         <div class="seikaku-wrapper1">
+         <div class="seikaku-item1">
+          <dt><span>キーワード</span></dt>
+          <br>
+          <div class="or-two aaa">
+            <dd>
+            <input type="checkbox" name="keyword" id="positive"><label for="positive">ポジティブ</label>
+            <input type="checkbox" name="keyword" id="noutenki"><label for="noutenki">能天気</label>
+            <input type="checkbox" name="keyword" id="yantya"><label for="yantya">やんちゃ</label>
+            <input type="checkbox" name="keyword" id="neaka"><label for="neaka">根明</label>
+            <input type="checkbox" name="keyword" id="kenage"><label for="kenage">健気</label>
+            <input type="checkbox" name="keyword" id="syoujiki"><label for="syoujiki">正義</label>
+            <input type="checkbox" name="keyword" id="otokomae"><label for="otokomae">男前</label>
+            <input type="checkbox" name="keyword" id="hakusiki"><label for="hakusiki">博識</label>
+            <input type="checkbox" name="keyword" id="tennnenn"><label for="tennnenn">天然</label>
+            <input type="checkbox" name="keyword" id="ottori"><label for="ottori">おっとり</label>
+            <input type="checkbox" name="keyword" id="taben"><label for="taben">多弁</label>
+            <br>
+            <input type="checkbox" name="keyword" id="tennsai"><label for="tennsai">天才</label>
+            <input type="checkbox" name="keyword" id="hitonatukoi"><label for="hitonatukoi">人懐こい</label>
+            <input type="checkbox" name="keyword" id="sennsai"><label for="sennsai">繊細</label>
+            <input type="checkbox" name="keyword" id="syoujikimono"><label for="syoujikimono">正直者</label>
+            <input type="checkbox" name="keyword" id="kiyou"><label for="kiyou">器用</label>
+            <input type="checkbox" name="keyword" id="juunann"><label for="juunann">柔軟</label>
+            <input type="checkbox" name="keyword" id="doryokuka"><label for="doryokuka">努力家</label>
+            <input type="checkbox" name="keyword" id="ritateki"><label for="ritateki">利他的</label>
+            <input type="checkbox" name="keyword" id="seijinn"><label for="seijinn">聖人君主</label>
+            <input type="checkbox" name="keyword" id="tennsi"><label for="tennsi">天使</label>
+            <input type="checkbox" name="keyword" id="kennkyo"><label for="kennkyo">謙虚</label>
+            <br>
+            <input type="checkbox" name="keyword" id="negative"><label for="negative">ネガティブ</label>
+            <input type="checkbox" name="keyword" id="shy"><label for="shy">シャイ</label>
+            <input type="checkbox" name="keyword" id="joutyofuanntei"><label for="joutyofuanntei">情緒不安定</label>
+            <input type="checkbox" name="keyword" id="nekura"><label for="nekura">根暗</label>
+            <input type="checkbox" name="keyword" id="futobutosii"><label for="futobutosii">太々しい</label>
+            <input type="checkbox" name="keyword" id="aku"><label for="aku">悪</label>
+            <input type="checkbox" name="keyword" id="memesii"><label for="memesii">女々しい</label>
+            <input type="checkbox" name="keyword" id="muti"><label for="muti">無知</label>
+            <input type="checkbox" name="keyword" id="innsitu"><label for="innsitu">陰湿</label>
+            <input type="checkbox" name="keyword" id="sekkati"><label for="sekkati">せっかち</label>
+            <input type="checkbox" name="keyword" id="mugonn"><label for="mugonn">無言</label>
+            <br>
+            <input type="checkbox" name="keyword" id="baka"><label for="baka">馬鹿</label>
+            <input type="checkbox" name="keyword" id="namakemono"><label for="namakemono">怠け者</label>
+            <input type="checkbox" name="keyword" id="hitogirai"><label for="hitogirai">人嫌い</label>
+            <input type="checkbox" name="keyword" id="bukiyou"><label for="bukiyou">不器用</label>
+            <input type="checkbox" name="keyword" id="namaiki"><label for="namaiki">生意気</label>
+            <input type="checkbox" name="keyword" id="gannko"><label for="gannko">頑固</label>
+            <input type="checkbox" name="keyword" id="amanojaku"><label for="amanojaku">天邪鬼</label>
+            <input type="checkbox" name="keyword" id="goumann"><label for="goumann">傲慢</label>
+            <input type="checkbox" name="keyword" id="rikoteki"><label for="rikoteki">利己的</label>
+            <input type="checkbox" name="keyword" id="saikopasu"><label for="saikopasu">サイコパス</label>
+            <input type="checkbox" name="keyword" id="akuma"><label for="akuma">悪魔</label>
+            <br>
+            <input type="checkbox" name="keyword" id="sinnkeisitu"><label for="sinnkeisitu">神経質</label>
+            <input type="checkbox" name="keyword" id="nekketu"><label for="nekketu">熱血</label>
+            <input type="checkbox" name="keyword" id="sokubututeki"><label for="sokubututeki">即物的</label>
+            <input type="checkbox" name="keyword" id="musinnkei"><label for="musinnkei">無神経</label>
+            <input type="checkbox" name="keyword" id="reisei"><label for="reisei">冷静</label>
+            <input type="checkbox" name="keyword" id="kinnyokuteki"><label for="kinnyokuteki">禁欲的</label>
+            <input type="checkbox" name="keyword" id="amaennbou"><label for="amaennbou">甘えん坊</label>
+            <input type="checkbox" name="keyword" id="romanntisuto"><label for="romanntisuto">ロマンチスト</label>
+            <input type="checkbox" name="keyword" id="stuikku"><label for="stoikku">ストイック</label>
+            <br>
+            <input type="checkbox" name="keyword" id="riarisuto"><label for="riarisuto">リアリスト</label>
+            <input type="checkbox" name="keyword" id="inu"><label for="inu">犬</label>
+            <input type="checkbox" name="keyword" id="neko"><label for="neko">猫</label>
+            <input type="checkbox" name="keyword" id="usagi"><label for="usagi">兎</label>
+            <input type="checkbox" name="keyword" id="ookami"><label for="ookami">狼</label>
+            <input type="checkbox" name="keyword" id="kitune"><label for="kitune">狐</label>
+            <input type="checkbox" name="keyword" id="hebi"><label for="hebi">蛇</label>
+            <input type="checkbox" name="keyword" id="hituji"><label for="hituji">羊</label>
+            <input type="checkbox" name="keyword" id="tunndere"><label for="tunndere">ツンデレ</label>
+            <input type="checkbox" name="keyword" id="yanndere"><label for="yanndere">ヤンデレ</label>
+            <input type="checkbox" name="keyword" id="deredere"><label for="deredere">デレデレ</label>
+            <input type="checkbox" name="keyword" id="ku-dere"><label for="ku-dere">クーデレ</label>
+            <br>
+            <input type="checkbox" name="keyword" id="menhera"><label for="menhera">メンヘラ</label>
+            <input type="checkbox" name="keyword" id="misuteriasu"><label for="misuteriasu">ミステリアス</label>
+            <input type="checkbox" name="keyword" id="otaku"><label for="otaku">オタク</label>
+            <input type="checkbox" name="keyword" id="indoa"><label for="indoa">インドア</label>
+            <input type="checkbox" name="keyword" id="autodoa"><label for="autodoa">アウトドア</label>
+            <input type="checkbox" name="keyword" id="sadhisuto"><label for="sadhisuto">サディスト</label>
+            <input type="checkbox" name="keyword" id="mazo"><label for="mazo">マゾヒスト</label>
+            <br>
+            <textarea name="keyword" rows="2" cols="100" placeholder="コメント"></textarea>
+          </dd>
+          </div>
+        </div>
+    </div>
+
+        <!-- ＝＝＝＝＝＝＝　その他　＝＝＝＝＝＝＝ -->
+        <h2 class="sonota-style">生い立ち・性格・備考</h2>
+        <hr class="sonota-style">
+        <div class="sonota-wrapper">
+        <div class="sonota-item">
+          <dt><span>生い立ち</span></dt>
+          <dd>
+            <textarea name="oitati" rows="12" cols="60" placeholder="コメント"></textarea>
+          </dd>
+        </div>
+    
+        <div class="sonota-item">
+          <dt><span>性格</span></dt>
+          <dd>
+            <textarea name="seikaku" rows="12" cols="60" placeholder="コメント"></textarea>
+          </dd>
+        </div>
+        </div>
+
+    <!-- ＝＝＝＝＝＝＝　学生・戦闘　＝＝＝＝＝＝＝ -->
+    <h2 class="gakusei-style">　学生　　　　　　　　　　　戦闘</h2>
+    <hr class="gakusei-style">
+    <div class="gakusei-wrapper">
+      <div class="gakusei-item">
+        <div class="column">
+          <dt><span>学校名</span></dt>
+          <dd>
+            <input type="text" name="school-name" size="38" placeholder="コメント" maxlength="20">
+            <br>
+            <input type="radio" name="school-name" id="zaigaku"><label for="zaigaku">在学</label>
+            <input type="radio" name="school-name" id="kisotu"><label for="kisotu">既卒</label>
+          </dd>
+        </div>
+        <div class="column">
+          <dt><span>クラス名</span></dt>
+          <dd>
+            <textarea name="class-name" rows="4" cols="37" placeholder="１年１組、〜〜コース等"></textarea>
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>クラスでの位置</span></dt>
+          <dd>
+            <input type="radio" name="iti" id="ri-yuu"><label for="ri-yuu">優等生</label>
+            <input type="radio" name="iti" id="tyuusinteki"><label for="tyuusinteki">中心的</label>
+            <input type="radio" name="iti" id="ninkimono"><label for="ninkimono">人気者</label>
+            <input type="radio" name="iti" id="otyousi"><label for="otyousi">お調子者</label>
+            <br>
+            <input type="radio" name="iti" id="tuizui"><label for="tuizui">追随</label>
+            <input type="radio" name="iti" id="kirawaremono"><label for="kirawaremono">嫌われ者</label>
+            <input type="radio" name="iti" id="haremono"><label for="haremono">腫れ物</label>
+            <input type="radio" name="iti" id="musi"><label for="musi">無視</label>
+            <input type="radio" name="iti" id="class-other"><label for="class-other">その他</label>
+            <br>
+            <input type="text" name="iti" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>クラス委員</span></dt>
+          <dd>
+            <textarea name="iin" rows="4" cols="37" placeholder="役職名等"></textarea>
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>部活</span></dt>
+          <dd>
+            <textarea name="bukatu" rows="4" cols="37" placeholder="テニス部、副部長"></textarea>
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>校則</span></dt>
+          <dd>
+            <input type="radio" name="kousoku" id="mamoru"><label for="mamoru">守る</label>
+            <input type="radio" name="kousoku" id="mamoranai"><label for="mamoranai">守らない</label>
+            <br>
+            <input type="text" name="kousoku" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>成績</span></dt>
+          <dd>
+            <input type="radio" name="seiseki" id="yuusyuu"><label for="yuusyuu">優秀</label>
+            <input type="radio" name="seiseki" id="seiseki-ue"><label for="seiseki-ue">上</label>
+            <input type="radio" name="seiseki" id="seiseki-tyuu"><label for="seiseki-tyuu">中</label>
+            <input type="radio" name="seiseki" id="seiseki-ge"><label for="seiseki-ge">下</label>
+            <br>
+            <input type="text" name="seiseki" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+
+        <div class="column">
+          <dt><span>得意科目</span></dt>
+          <dd>
+            <input type="checkbox" name="subject" id="kokugo"><label for="kokugo">国</label>
+            <input type="checkbox" name="subject" id="suugaku"><label for="suugaku">数</label>
+            <input type="checkbox" name="subject" id="eigo"><label for="eigo">英</label>
+            <input type="checkbox" name="subject" id="rika"><label for="rika">理</label>
+            <input type="checkbox" name="subject" id="syakai"><label for="syakai">社</label>
+            <input type="checkbox" name="subject" id="taiiku"><label for="taiiku">体</label>
+            <input type="checkbox" name="subject" id="ongaku"><label for="ongaku">音</label>
+            <input type="checkbox" name="subject" id="bijutu"><label for="bijutu">美</label>
+            <input type="checkbox" name="subject" id="jouhou"><label for="jouhou">情報</label>
+            <br>
+            <input type="checkbox" name="subject" id="subject-other"><label for="subject-other">その他</label>
+            <br>
+            <input type="text" name="subject" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+      </div>
+
+      <div class="gakusei-item">
+        <div class="column ccc ddd">
+          <dt><span>メイン武器</span></dt>
+          <dd>
+            <input type="checkbox" name="buki" id="syu-kenn"><label for="syu-kenn">剣</label>
+            <input type="checkbox" name="buki" id="syu-kobusi"><label for="syu-kobusi">拳</label>
+            <input type="checkbox" name="buki" id="syu-yumi"><label for="syu-yumi">弓</label>
+            <input type="checkbox" name="buki" id="syu-yari"><label for="syu-yari">槍</label>
+            <input type="checkbox" name="buki" id="syu-ono"><label for="syu-ono">斧</label>
+            <input type="checkbox" name="buki" id="syu-naifu"><label for="syu-naifu">ナイフ</label>
+            <input type="checkbox" name="buki" id="syu-juuki"><label for="syu-juuki">銃器</label>
+            <br>
+            <input type="checkbox" name="buki" id="syu-mahou"><label for="syu-mahou">魔法</label>
+            <input type="checkbox" name="buki" id="syu-wajutu"><label for="syu-wajutu">話術</label>
+            <input type="checkbox" name="buki" id="syu-jouhou"><label for="syu-jouhou">情報</label>
+            <input type="checkbox" name="buki" id="syu-doku"><label for="syu-doku">毒薬</label>
+            <input type="checkbox" name="buki" id="syu-tyou"><label for="syu-tyou">超能力</label>
+            <input type="checkbox" name="buki" id="syu-other"><label for="syu-other">その他</label>
+            <br>
+            <input type="text" name="buki" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div> 
+        
+        <div class="column ccc">
+          <dt><span>サブ武器</span></dt>
+          <dd>
+            <input type="checkbox" name="sabu" id="s-kenn"><label for="s-kenn">剣</label>
+            <input type="checkbox" name="sabu" id="s-kobusi"><label for="s-kobusi">拳</label>
+            <input type="checkbox" name="sabu" id="s-yumi"><label for="s-yumi">弓</label>
+            <input type="checkbox" name="sabu" id="s-yari"><label for="s-yari">槍</label>
+            <input type="checkbox" name="sabu" id="s-ono"><label for="s-ono">斧</label>
+            <input type="checkbox" name="sabu" id="s-naifu"><label for="s-naifu">ナイフ</label>
+            <input type="checkbox" name="sabu" id="s-juuki"><label for="s-juuki">銃器</label>
+            <br>
+            <input type="checkbox" name="sabu" id="s-mahou"><label for="s-mahou">魔法</label>
+            <input type="checkbox" name="sabu" id="s-wajutu"><label for="s-wajutu">話術</label>
+            <input type="checkbox" name="sabu" id="s-jouhou"><label for="s-jouhou">情報</label>
+            <input type="checkbox" name="sabu" id="s-doku"><label for="s-doku">毒薬</label>
+            <input type="checkbox" name="sabu" id="s-tyou"><label for="s-tyou">超能力</label>
+            <input type="checkbox" name="sabu" id="s-other"><label for="s-other">その他</label>
+            <br>
+            <input type="text" name="buki" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+
+                   <!-- ＝＝＝＝＝＝＝　能力　＝＝＝＝＝＝＝ -->
+                   <h2 class="nouryoku-style">能力概要</h2>
+                   <hr class="nouryoku-style no-hr">
+                   <div class="nouryoku-wrapper">
+                     <div class="nouryoku-item">
+                       <div class="column bbb">
+                         <dt><span>評価概要</span></dt>
+                         <dd>SS:伝説級</dd>
+                         <dd>S:英雄級</dd>
+                         <dd>A:天才</dd>
+                         <dd>B:秀才</dd>
+                         <dd>C:平均以上</dd>
+                         <dd>D:一般人</dd>
+                         <dd>E:凡才</dd>
+                         <dd>F:才能なし</dd>
+                         <dd>G:適正なし</dd>
+                         <dd>✖️:項目なし</dd>
+                       </div>
+                     </div>
+               
+                     <div class="nouryoku-item">
+                       <div class="column">
+                         <dt><span>HP（体力）</span></dt>
+                           <dd>
+                             <select name="hp" id="" required>
+                               <option value="ss">SS</option>
+                               <option value="s">S</option>
+                               <option value="a">A</option>
+                               <option value="b">B</option>
+                               <option value="c">C</option>
+                               <option value="d">D</option>
+                               <option value="e">E</option>
+                               <option value="f">F</option>
+                               <option value="g">G</option>
+                               <option value="batu">✖️</option>
+                             </select>
+                             
+                             <input type="text" name="hp" size="19" placeholder="コメント" maxlength="10">
+                           </dd>
+                       </div>
+               
+                       <div class="column">
+                         <dt><span>MP（魔力）</span></dt>
+                         <dd>
+                           <select name="mp" id="" required>
+                             <option value="ss">SS</option>
+                             <option value="s">S</option>
+                             <option value="a">A</option>
+                             <option value="b">B</option>
+                             <option value="c">C</option>
+                             <option value="d">D</option>
+                             <option value="e">E</option>
+                             <option value="f">F</option>
+                             <option value="g">G</option>
+                             <option value="batu">✖️</option>
+                           </select>
+                           
+                           <input type="text" name="mp" size="19" placeholder="コメント" maxlength="10">
+                         </dd>
+                       </div>
+               
+                       <div class="column">
+                         <dt><span>STR（物攻）</span></dt>
+                         <dd>
+                           <select name="str" id="" required>
+                             <option value="ss">SS</option>
+                             <option value="s">S</option>
+                             <option value="a">A</option>
+                             <option value="b">B</option>
+                             <option value="c">C</option>
+                             <option value="d">D</option>
+                             <option value="e">E</option>
+                             <option value="f">F</option>
+                             <option value="g">G</option>
+                             <option value="batu">✖️</option>
+                           </select>
+                           
+                           <input type="text" name="str" size="19" placeholder="コメント" maxlength="10">
+                         </dd>
+                       </div>
+               
+                       <div class="column">
+                         <dt><span>INT（魔攻）</span></dt>
+                         <dd>
+                           <select name="int" id="" required>
+                             <option value="ss">SS</option>
+                             <option value="s">S</option>
+                             <option value="a">A</option>
+                             <option value="b">B</option>
+                             <option value="c">C</option>
+                             <option value="d">D</option>
+                             <option value="e">E</option>
+                             <option value="f">F</option>
+                             <option value="g">G</option>
+                             <option value="batu">✖️</option>
+                           </select>
+                           
+                           <input type="text" name="int" size="19" placeholder="コメント" maxlength="10">
+                         </dd>
+                       </div>
+               
+                       <div class="column">
+                         <dt><span>DEF（物防）</span></dt>
+                         <dd>
+                           <select name="def" id="" required>
+                             <option value="ss">SS</option>
+                             <option value="s">S</option>
+                             <option value="a">A</option>
+                             <option value="b">B</option>
+                             <option value="c">C</option>
+                             <option value="d">D</option>
+                             <option value="e">E</option>
+                             <option value="f">F</option>
+                             <option value="g">G</option>
+                             <option value="batu">✖️</option>
+                           </select>
+                           
+                           <input type="text" name="def" size="19" placeholder="コメント" maxlength="10">
+                         </dd>
+                       </div>
+               
+                       <div class="column">
+                         <dt><span>RES（魔防）</span></dt>
+                         <dd>
+                           <select name="res" id="" required>
+                             <option value="ss">SS</option>
+                             <option value="s">S</option>
+                             <option value="a">A</option>
+                             <option value="b">B</option>
+                             <option value="c">C</option>
+                             <option value="d">D</option>
+                             <option value="e">E</option>
+                             <option value="f">F</option>
+                             <option value="g">G</option>
+                             <option value="batu">✖️</option>
+                           </select>
+                           
+                           <input type="text" name="res" size="19" placeholder="コメント" maxlength="10">
+                         </dd>
+                       </div>
+               
+                       <div class="column">
+                         <dt><span>AGI（素早）</span></dt>
+                         <dd>
+                           <select name="agi" id="" required>
+                             <option value="ss">SS</option>
+                             <option value="s">S</option>
+                             <option value="a">A</option>
+                             <option value="b">B</option>
+                             <option value="c">C</option>
+                             <option value="d">D</option>
+                             <option value="e">E</option>
+                             <option value="f">F</option>
+                             <option value="g">G</option>
+                             <option value="batu">✖️</option>
+                           </select>
+                           
+                           <input type="text" name="agi" size="19" placeholder="コメント" maxlength="10">
+                         </dd>
+                       </div>
+               
+                       <div class="column">
+                         <dt><span>DEX（器用）</span></dt>
+                         <dd>
+                           <select name="dex" id="" required>
+                             <option value="ss">SS</option>
+                             <option value="s">S</option>
+                             <option value="a">A</option>
+                             <option value="b">B</option>
+                             <option value="c">C</option>
+                             <option value="d">D</option>
+                             <option value="e">E</option>
+                             <option value="f">F</option>
+                             <option value="g">G</option>
+                             <option value="batu">✖️</option>
+                           </select>
+                           
+                           <input type="text" name="dex" size="19" placeholder="コメント" maxlength="10">
+                         </dd>
+                       </div>
+               
+                       <div class="column">
+                         <dt><span>LUX（運）</span></dt>
+                         <dd>
+                           <select name="lux" id="" required>
+                             <option value="ss">SS</option>
+                             <option value="s">S</option>
+                             <option value="a">A</option>
+                             <option value="b">B</option>
+                             <option value="c">C</option>
+                             <option value="d">D</option>
+                             <option value="e">E</option>
+                             <option value="f">F</option>
+                             <option value="g">G</option>
+                             <option value="batu">✖️</option>
+                           </select>
+                           
+                           <input type="text" name="lux" size="19" placeholder="コメント" maxlength="10">
+                         </dd>
+                       </div>
+                     </div>
+                   </div>
+
+      </div>
+    </div>
+
+        <!-- ＝＝＝＝＝＝＝　趣味・特技・社会的　＝＝＝＝＝＝＝ -->
+        <h2 class="syumi-style">趣味・特技　　　　　　　　　社会的</h2>
+        <hr class="syumi-style">
+        <!-- 趣味・特技１ -->
+        <div class="syumi-wrapper">
+          <div class="syumi-item">
+            <div class="column">
+              <dt><span>主食</span></dt>
+              <dd>
+                <input type="radio" name="syusyoku" id="wasyoku"><label for="wasyoku">和食</label>
+                <input type="radio" name="syusyoku" id="yousyoku"><label for="yousyoku">洋食</label>
+                <input type="radio" name="syusyoku" id="tyuuka"><label for="tyuuka">中華</label>
+                <input type="radio" name="syusyoku" id="i"><label for="i">伊</label>
+                <input type="radio" name="syusyoku" id="jannku"><label for="jannku">ジャンク</label>
+                <input type="radio" name="syusyoku" id="syusyoku-other"><label for="syusyoku-other">その他</label>
+                <br>
+                <input type="text" name="" size="38" placeholder="コメント" maxlength="20">
+              </dd>
+            </div>
+    
+            <div class="column">
+              <dt><span>味覚</span></dt>
+              <dd>
+                <input type="radio" name="mikaku" id="amatou"><label for="amatou">甘党</label>
+                <input type="radio" name="mikaku" id="karatou"><label for="karatou">辛党</label>
+                <input type="radio" name="mikaku" id="usuaji"><label for="usuaji">薄味</label>
+                <input type="radio" name="mikaku" id="mikaku-futuu"><label for="mikaku-futuu">普通</label>
+                <input type="radio" name="mikaku" id="onnti"><label for="onnti">音痴</label>
+                <input type="radio" name="mikaku" id="hennsyoku"><label for="hennsyoku">偏食</label>
+                <br>
+                <input type="radio" name="mikaku" id="akujiki"><label for="akujiki">悪食</label>
+                <br>
+                <input type="text" name="" size="38" placeholder="コメント" maxlength="20">
+              </dd>
+            </div>
+    
+            <div class="column">
+              <dt><span>好きな食べ物</span></dt>
+              <dd>
+                <textarea name="sukina-food" rows="4" cols="37" placeholder="コメント"></textarea>
+              </dd>
+            </div>
+    
+            <div class="column">
+              <dt><span>嫌いな食べ物</span></dt>
+              <dd>
+                <textarea name="kirai-food" rows="4" cols="37" placeholder="コメント"></textarea>
+              </dd>
+            </div>
+    
+            <div class="column">
+              <dt><span>好きな物事</span></dt>
+              <dd>
+                <textarea name="suki-monogoto" rows="4" cols="37" placeholder="コメント"></textarea>
+              </dd>
+            </div>
+    
+            <div class="column">
+              <dt><span>嫌いな物事</span></dt>
+              <dd>
+                <textarea name="kirai-monogoto" rows="4" cols="37" placeholder="コメント"></textarea>
+              </dd>
+            </div>
+    
+            <div class="column">
+              <dt><span>服装</span></dt>
+              <dd>
+                <textarea name="close" rows="4" cols="37" placeholder="コメント"></textarea>
+              </dd>
+            </div>
+          </div>
+    
+          <div class="syumi-item">
+            <div class="column">
+              <dt><span>役職・地位</span></dt>
+              <dd>
+                <input type="radio" name="tii" id="ippann"><label for="ippann">一般</label>
+                <input type="radio" name="tii" id="syouninn"><label for="syouninn">商人</label>
+                <input type="radio" name="tii" id="kizoku"><label for="kizoku">貴族</label>
+                <input type="radio" name="tii" id="ouzoku"><label for="ouzoku">王族</label>
+                <input type="radio" name="tii" id="gunjin"><label for="gunjin">軍人</label>
+                <input type="radio" name="tii" id="seisyoku"><label for="seisyoku">聖職</label>
+                <br>
+                <input type="radio" name="tii" id="gakusei"><label for="gakusei">学生</label>
+                <input type="radio" name="tii" id="tii-other"><label for="tii-other">その他</label>
+                <br>
+                <input type="text" name="" size="38" placeholder="コメント" maxlength="20">
+              </dd>
+            </div>
+    
+            <div class="column">
+              <dt><span>現職</span></dt>
+              <dd>
+                <textarea name="gennsyoku" rows="4" cols="37" placeholder="コメント"></textarea>
+              </dd>
+            </div>
+    
+            <div class="column">
+              <dt><span>過去の職業</span></dt>
+              <dd>
+                <textarea name="kako-syoku" rows="4" cols="37" placeholder="コメント"></textarea>
+              </dd>
+            </div>
+    
+            <div class="column">
+              <dt><span>専門分野</span></dt>
+              <dd>
+                <textarea name="senmonnbunnya" rows="4" cols="37" placeholder="コメント"></textarea>
+              </dd>
+            </div>
+    
+            <div class="column">
+              <dt><span>免許・乗り物</span></dt>
+              <dd>
+                <input type="radio" name="menkyo" id="jidousya"><label for="jidousya">自動車</label>
+                <input type="radio" name="menkyo" id="nirinn"><label for="nirinn">二輪</label>
+                <input type="radio" name="menkyo" id="oogata"><label for="oogata">大型</label>
+                <input type="radio" name="menkyo" id="tyuugata"><label for="tyuugata">中型</label>
+                <input type="radio" name="menkyo" id="kogata"><label for="kogata">小型</label>
+                <input type="radio" name="menkyo" id="koukuu"><label for="koukuu">航空</label>
+                <br>
+                <input type="radio" name="menkyo" id="mennkyo-other"><label for="mennkyo-other">その他</label>
+                <br>
+                <input type="text" name="menkyo" size="38" placeholder="コメント" maxlength="20">
+              </dd>
+            </div>
+    
+            <div class="column">
+              <dt><span>知能レベル</span></dt>
+              <dd>
+                <input type="radio" name="tinou" id="tinou-kou"><label for="tinou-kou">高</label>
+                <input type="radio" name="tinou" id="tinou-tyuu"><label for="tinou-tyuu">中</label>
+                <input type="radio" name="tinou" id="tinou-tei"><label for="tinou-tei">低</label>
+                <br>
+                <input type="text" name="tinou" size="38" placeholder="コメント" maxlength="20">
+              </dd>
+            </div>
+    
+            <div class="column">
+              <dt><span>知識レベル</span></dt>
+              <dd>
+                <input type="radio" name="reberu" id="reberu-kou"><label for="reberu-kou">高</label>
+                <input type="radio" name="reberu" id="reberu-tyuu"><label for="reberu-tyuu">中</label>
+                <input type="radio" name="reberu" id="reberu-tei"><label for="reberu-tei">低</label>
+                <br>
+                <input type="text" name="reberu" size="38" placeholder="コメント" maxlength="20">
+              </dd>
+            </div>
+    
+            <div class="column">
+              <dt><span>宗教</span></dt>
+              <dd>
+                <input type="radio" name="syuukyou" id="syuukyou-ari"><label for="syuukyou-ari">有</label>
+                <input type="radio" name="syuukyou" id="syuukyou-nasi"><label for="syuukyou-nasi">無</label>
+                <br>
+                <input type="text" name="syuukyou" size="38" placeholder="コメント" maxlength="20">
+              </dd>
+            </div>
+    
+            <div class="column">
+              <dt><span>信仰心</span></dt>
+              <dd>
+                <input type="radio" name="sinkou" id="sinkou-ari"><label for="sinkou-ari">有</label>
+                <input type="radio" name="sinkou" id="sinkou-nasi"><label for="sinkou-nasi">無</label>
+                <input type="radio" name="sinkou-reberu" id="sinkou-kou"><label for="sinkou-kou">高</label>
+                <input type="radio" name="sinkou-reberu" id="sinkou-tyuu"><label for="sinkou-tyuu">中</label>
+                <input type="radio" name="sinkou-reberu" id="sinkou-tei"><label for="sinkou-tei">低</label>
+                <br>
+                <input type="text" name="sinkou" size="38" placeholder="コメント" maxlength="20">
+              </dd>
+            </div>
+          </div>
+        </div>
+
+        <br><br><br><br><br>
+
+    <!-- ＝＝＝＝＝＝＝　対応・反応　＝＝＝＝＝＝＝ -->
+    <h2 class="taiou-style">対応・反応　　　　　　　その他</h2>
+    <hr class="taiou-style">
+    <div  class="taiou-wrapper">
+      <div class="taiou-item">
+        <div class="column">
+          <dt><span>危機的局面</span></dt>
+          <div class="or-two1">
+          <dd>
+            <input type="checkbox" name="kikiteki" id="tatakau"><label for="tatakau">戦う</label>
+            <input type="checkbox" name="kikiteki" id="kaihi"><label for="kaihi">回避</label>
+            <input type="checkbox" name="kikiteki" id="taninnmakase"><label for="taninnmakase">他人任せ</label>
+            <input type="checkbox" name="kikiteki" id="yousumi"><label for="yousumi">様子見</label>
+            <br>
+            <input type="text" name="kikiteki" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+        </div>
+
+        <div class="column">
+          <dt><span>振られた！</span></dt>
+          <div class="or-two1">
+          <dd>
+            <input type="checkbox" name="furareta" id="gamann"><label for="gamann">我慢</label>
+            <input type="checkbox" name="furareta" id="cry"><label for="cry">泣く</label>
+            <input type="checkbox" name="furareta" id="angry"><label for="angry">怒る</label>
+            <input type="checkbox" name="furareta" id="kobiru"><label for="kobiru">媚びる</label>
+            <br>
+            <input type="checkbox" name="furareta" id="toitumeru"><label for="toitumeru">問い詰める</label>
+            <input type="checkbox" name="furareta" id="mitomenai"><label for="mitomenai">認めない</label>
+            <br>
+            <input type="checkbox" name="furareta" id="suto-ka"><label for="suto-ka">ストーカー</label>
+            <input type="checkbox" name="furareta" id="bouzenn"><label for="bouzenn">呆然</label>
+            <input type="checkbox" name="furareta" id="gyakugire"><label for="gyakugire">逆ギレ</label>
+            <br>
+            <input type="text" name="furareta" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+        </div>
+
+        <div class="column">
+          <dt><span>失敗したとき</span></dt>
+          <div class="or-two1">
+          <dd>
+            <input type="checkbox" name="sippai" id="mitomeru"><label for="mitomeru">認める</label>
+            <input type="checkbox" name="sippai" id="gomakasu"><label for="gomakasu">誤魔化す</label>
+            <input type="checkbox" name="sippai" id="seitouka"><label for="seitouka">正当化</label>
+            <br>
+            <input type="checkbox" name="sippai" id="tatinaoru"><label for="tatinaoru">立ち直り</label>
+            <input type="checkbox" name="sippai" id="sippai-himitu"><label for="sippai-himitu">秘密</label>
+            <input type="checkbox" name="sippai" id="sippai-okoru"><label for="sippai-okoru">怒る</label>
+            <input type="checkbox" name="sippai" id="tenka"><label for="tenka">転嫁</label>
+            <br>
+            <input type="checkbox" name="sippai" id="hikizuru"><label for="hikizuru">引きずる</label>
+            <input type="checkbox" name="sippai" id="sippai-bouzenn"><label for="sippai-bouzenn">呆然</label>
+            <br>
+            <input type="text" name="sippai" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+        </div>
+
+        <div class="column">
+          <dt><span>成功したとき</span></dt>
+          <div class="or-two1">
+          <dd>
+            <input type="checkbox" name="seikousitatoki" id="zuninoru"><label for="zuninoru">図に乗る</label>
+            <input type="checkbox" name="seikousitatoki" id="kenkyo"><label for="kenkyo">謙虚</label>
+            <input type="checkbox" name="seikousitatoki" id="maiagaru"><label for="maiagaru">舞い上がる</label>
+            <br>
+            <input type="checkbox" name="seikousitatoki" id="seikou-reisei"><label for="seikou-reisei">冷静</label>
+            <input type="checkbox" name="seikousitatoki" id="jousyousikou"><label for="jousyousikou">上昇志向</label>
+            <br>
+            <input type="text" name="seikousitatoki" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+        </div>
+
+        <div class="column">
+          <dt><span>分からないとき</span></dt>
+          <div class="or-two1">
+          <dd>
+            <input type="checkbox" name="wakaranai" id="wakaranai-mitomeru"><label for="wakaranai-mitomeru">認める</label>
+            <input type="checkbox" name="wakaranai" id="wa-gomakasu"><label for="wa-gomakasu">誤魔化す</label>
+            <input type="checkbox" name="wakaranai" id="aitenosei"><label for="aitenosei">相手のせい</label>
+            <br>
+            <input type="checkbox" name="wakaranai" id="situmonn"><label for="situmonn">質問</label>
+            <input type="checkbox" name="wakaranai" id="wa-musi"><label for="wa-musi">無視</label>
+            <input type="checkbox" name="wakaranai" id="siraberu"><label for="siraberu">調べる</label>
+            <br>
+            <input type="text" name="wakaranai" size="38" placeholder="コメント" maxlength="20">
+          </dd>
+        </div>
+        </div>
+      </div>
+
+        <div class="taiou-item">
+          <div class="column">
+            <dt><span>親友</span></dt>
+            <dd>
+              <input type="radio" name="sinnyuu" id="sin-ari"><label for="sin-ari">有</label>
+              <input type="radio" name="sinnyuu" id="sin-nasi"><label for="sin-nasi">無</label>
+              <br>
+              <input type="text" name="sinnyuu" size="38" placeholder="出会い" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>相棒</span></dt>
+            <dd>
+              <input type="radio" name="aibou" id="aibou-ari"><label for="aibou-ari">有</label>
+              <input type="radio" name="aibou" id="aibou-nasi"><label for="aibou-nasi">無</label>
+              <br>
+              <input type="text" name="aibou" size="38" placeholder="出会い" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>師匠</span></dt>
+            <dd>
+              <input type="radio" name="sisyou" id="sisyou-ari"><label for="sisyou-ari">有</label>
+              <input type="radio" name="sisyou" id="sisyou-nasi"><label for="sisyou-nasi">無</label>
+              <br>
+              <input type="text" name="sisyou" size="38" placeholder="出会い" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>尊敬</span></dt>
+            <dd>
+              <input type="radio" name="sonkei" id="son-ari"><label for="son-ari">有</label>
+              <input type="radio" name="sonkei" id="son-nasi"><label for="son-nasi">無</label>
+              <br>
+              <input type="text" name="sonkei" size="38" placeholder="出会い" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>宿敵</span></dt>
+            <dd>
+              <input type="radio" name="syukuteki" id="syuku-ari"><label for="syuku-ari">有</label>
+              <input type="radio" name="syukuteki" id="syuku-nasi"><label for="syuku-nasi">無</label>
+              <br>
+              <input type="text" name="syukuteki" size="38" placeholder="出会い" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>天敵</span></dt>
+            <dd>
+              <input type="radio" name="tenteki" id="ten-ari"><label for="ten-ari">有</label>
+              <input type="radio" name="tenteki" id="ten-nasi"><label for="ten-nasi">無</label>
+              <br>
+              <input type="text" name="tenteki" size="38" placeholder="出会い" maxlength="20">
+            </dd>
+          </div>
+
+          <div class="column">
+            <dt><span>ペット</span></dt>
+            <dd>
+              <input type="radio" name="pet" id="pet-ari"><label for="pet-ari">有</label>
+              <input type="radio" name="pet" id="pet-nasi"><label for="pet-nasi">無</label>
+              <br>
+              <input type="text" name="pet" size="38" placeholder="犬　名前:太郎" maxlength="20">
+            </dd>
+          </div>
+        </div>
+    </div>
+
+        <!-- ＝＝＝＝＝＝＝　備考　＝＝＝＝＝＝＝ -->
+
+    <div class="bikou-wrapper">
+      <div class="bikou-item">
+          <dt><span>備考1</span></dt>
+          <dd>
+            <textarea name="bikou" rows="6" cols="120" placeholder="コメント"></textarea>
+          </dd>
+      </div>
+
+      <div class="bikou-item">
+        <dt><span>備考2</span></dt>
+        <dd>
+          <textarea name="bikou" rows="6" cols="120" placeholder="コメント"></textarea>
+        </dd>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+      <!-- <div><input type="submit" value="終了"></div> -->
+  </form>
+
+
+         
+    
+    <script src="./JS/style.js"></script>
+  </body>
+</html>
+<!--  
+<div class="column">
+  <dt><span></span></dt>
+  <div class="or-two1">
+  <dd>
+    <input type="radio" name="" id=""><label for=""></label>
+    <br>
+    <input type="text" name="" size="38" placeholder="コメント" maxlength="20">
+  </dd>
+  <div>
+</div>
+
+        <div class="column">
+          <dt><span></span></dt>
+          <dd>
+            <textarea name="" rows="4" cols="37" placeholder="コメント"></textarea>
+          </dd>
+        </div>
+
+        <div class="sonota-item">
+          <dt><span>備考</span></dt>
+          <dd>
+            <textarea name="bikou" rows="12" cols="120" placeholder="コメント"></textarea>
+          </dd>
+        </div>
+    
+-->
